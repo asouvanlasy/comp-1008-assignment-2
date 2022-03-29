@@ -12,20 +12,20 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("schedule-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Weekly Schedule");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-        //launch();
+        launch();
 
-        Day sunday = new Day(LocalDate.now());
-        sunday.addTask("Work on Java");
-        Week week = new Week();
-        week.addDay(sunday);
-        System.out.println(sunday);
-        System.out.println(week);
+//        Day sunday = new Day(LocalDate.now());
+//        sunday.addTask("Work on Java");
+//        Week week = new Week();
+//        week.addDay(sunday);
+//        System.out.println(sunday);
+//        System.out.println(week);
     }
 }
