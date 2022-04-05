@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDate;
 
 public class Main extends Application {
     @Override
@@ -20,12 +19,5 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch();
-
-//        Day sunday = new Day(LocalDate.now());
-//        sunday.addTask("Work on Java");
-//        Week week = new Week();
-//        week.addDay(sunday);
-//        System.out.println(sunday);
-//        System.out.println(week);
     }
 }

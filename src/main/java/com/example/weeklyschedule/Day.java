@@ -1,29 +1,30 @@
 package com.example.weeklyschedule;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class Day {
-    private ArrayList<String> tasks;
+    private String task;
     private LocalDate date;
 
-    public Day(LocalDate date) {
-        this.tasks = new ArrayList<>();
+    public Day(String task, LocalDate date) {
+        setTask(task);
         this.date = date;
     }
 
-    // Method to add strings to the tasks list
-    // An exception is thrown if the field is empty
-    public void addTask(String task) {
-        if (!task.isEmpty()) {
-            tasks.add(task);
+    public String getTask() {
+        return task;
+    }
+
+    public void setTask(String task) {
+        if (task.length() > 1) {
+            this.task = task;
         } else {
-            throw new IllegalArgumentException("Task cannot be empty.");
+            throw new IllegalArgumentException("Task must be at least 2 characters.");
         }
     }
 
     @Override
     public String toString() {
-        return String.format("Date: %s Tasks: %s", date, tasks);
+        return String.format("Date: %s Tasks: %s", date, task);
     }
 }
