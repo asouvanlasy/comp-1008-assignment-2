@@ -3,14 +3,17 @@ package com.example.weeklyschedule;
 import java.util.ArrayList;
 
 public class Week {
+
     private ArrayList<Day> days;
 
     public Week() {
         this.days = new ArrayList<Day>();
     }
 
-    // This method takes a Day object (tasks, date) and adds it to the days list
-    // An exception is thrown if you try to add more than 7 days
+    /**
+     * This method takes a Day object (tasks, date) and adds it to the days list
+     * @param day - An exception is thrown if you try to add more than 7 days
+     */
     public void addDay(Day day) {
         if (days.size() <= 7) {
             days.add(day);
@@ -19,8 +22,12 @@ public class Week {
         }
     }
 
+    public ArrayList<Day> getDays() {
+        return days;
+    }
+
     @Override
     public String toString() {
-        return String.format("Days in week: %s", days);
+        return days.toString();
     }
 }

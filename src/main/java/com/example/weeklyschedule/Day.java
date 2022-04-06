@@ -8,7 +8,7 @@ public class Day {
 
     public Day(String task, LocalDate date) {
         setTask(task);
-        this.date = date;
+        setDate(date);
     }
 
     public String getTask() {
@@ -16,15 +16,23 @@ public class Day {
     }
 
     public void setTask(String task) {
-        if (task.length() > 1) {
+        if (task.length() > 1 && !task.isBlank()) {
             this.task = task;
         } else {
             throw new IllegalArgumentException("Task must be at least 2 characters.");
         }
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
-        return String.format("Date: %s Tasks: %s", date, task);
+        return String.format("\nDate: %s\nTasks: %s", date, task);
     }
 }
