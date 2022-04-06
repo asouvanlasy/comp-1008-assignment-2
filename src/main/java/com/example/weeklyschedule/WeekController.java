@@ -17,7 +17,7 @@ public class WeekController {
     Button submitDayBtn = new Button();
 
     @FXML
-    Button editBtn = new Button();
+    Button removeBtn = new Button();
 
     @FXML
     ListView weekView = new ListView();
@@ -30,6 +30,7 @@ public class WeekController {
     public void initialize() {
         Week week = new Week();
 
+        // Add day to week and list
         submitDayBtn.setOnAction(e -> {
             // In order to create multiple day objects, I need to create it here
             Day day = new Day("Your task", LocalDate.EPOCH);
@@ -50,9 +51,11 @@ public class WeekController {
             weekView.getItems().setAll(week.getDays());
         });
 
-        // TODO method that allows you to edit the selected day in the weekView
-        editBtn.setOnAction(e -> {
+        // Remove day from week and list
+        removeBtn.setOnAction(e -> {
             int selectedDay = weekView.getSelectionModel().getSelectedIndex();
+            week.getDays().remove(selectedDay);
+            weekView.getItems().remove(selectedDay);
         });
     }
 }
