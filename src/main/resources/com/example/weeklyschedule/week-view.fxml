@@ -7,22 +7,29 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weeklyschedule.WeekController">
     <children>
-      <VBox layoutX="19.0" layoutY="18.0" prefHeight="300.0" prefWidth="300.0" spacing="10.0">
+      <VBox layoutX="49.0" layoutY="56.0" prefHeight="489.0" prefWidth="280.0" spacing="10.0">
          <children>
-            <Label text="Add a Day" />
+            <Label text="Set a date and your schedule:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
               <Label fx:id="dateLabel" text="Date:" />
-              <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="245.0" />
+              <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="292.0" />
               <Label fx:id="dateLabel1" text="Task:" />
               <TextField fx:id="taskField" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="174.0" text="What do you need to do?" />
               <Button fx:id="submitDayBtn" mnemonicParsing="false" text="Add Day" />
          </children>
       </VBox>
-      <VBox alignment="CENTER" layoutX="349.0" layoutY="24.0" prefHeight="551.0" prefWidth="320.0" spacing="10.0">
+      <VBox alignment="CENTER" layoutX="349.0" layoutY="24.0" prefHeight="551.0" prefWidth="427.0" spacing="10.0">
          <children>
-            <Label text="Week View" />
+            <Label text="Week View">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
             <ListView fx:id="weekView" prefHeight="521.0" prefWidth="320.0" />
             <Button fx:id="removeBtn" mnemonicParsing="false" text="Remove" />
          </children>

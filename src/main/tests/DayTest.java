@@ -18,7 +18,7 @@ class DayTest {
     @Test
     void setTask() {
         day.setTask("A string");
-        assertEquals("Some sort of string", day.getTask());
+        assertEquals("A string", day.getTask());
     }
 
     @Test

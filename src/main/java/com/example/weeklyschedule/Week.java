@@ -15,7 +15,7 @@ public class Week {
      * @param day - An exception is thrown if you try to add more than 7 days
      */
     public void addDay(Day day) {
-        if (days.size() <= 7) {
+        if (days.size() < 7) {
             days.add(day);
         } else {
             throw new IllegalArgumentException("Maximum days in a week (7) reached.");
